@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODO LIST</title>
+  <link rel="stylesheet" href="./css/main.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <style>
+    .btns-divv {
+      display: flex;
+      gap: 30px;
+      margin-top: 20px;
+    }
+
+    .complete-btn {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      padding: 6px 15px;
+      gap: 4px 0px;
+      background-color: #09A50C;
+      color: white;
+      border-radius: 10px;
+      border: none;
+    }
+
+    .complete-btn::before {
+      content: " ";
+      background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR_ATB9n_6vRtdW0x4G-EMLq62tfweK4szZAuND08kh3MJUmGNGqIL3DSi_UsyeYVTVAEM&usqp=CAU');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 -0.5px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+
+    .editt-btn {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 0px 35px;
+      border-radius: 10px;
+      border: none;
+      gap: 5px;
+      color: white;
+      background-color: #E4C309;
+    }
+
+    .editt-btn::before {
+      content: " ";
+      background-image: url('https://img.icons8.com/ios-glyphs/30/null/create-new.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 -0.5px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .time-btn {
+      padding: 0px 25px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      gap: 5px;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      background-color: #1F90F3;
+    }
+
+    .time-btn::before {
+      content: " ";
+      background-image: url('https://img.icons8.com/ios-glyphs/30/null/delivery-time.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 -0.5px;
+      width: 24px;
+      height: 24px;
+    }
+
+    .delete-button {
+      padding: 0px 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      border-radius: 10px;
+      border: none;
+      color: white;
+      background-color: #F43737;
+    }
+
+    .delete-button::before {
+      content: " ";
+      background-image: url('https://img.icons8.com/ios-glyphs/30/null/trash--v1.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 0 -0.5px;
+      width: 24px;
+      height: 24px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="todolist-container">
+    <div class="todolist__form-wrapper">
+      <form id="todolist-form">
+        <input id="todolist-adder-input" class="todolist__form-input" type="text" placeholder="Add todo" required>
+        <img class="img" src="./img/Без названия.png" alt="">
+        <button class="todolist__form-submit" type="submit"> <i class="fas fa-plus"></i> Create</button>
+      </form>
+      <button class="todolist__form-delete-all" id="delete-all">Delete All</button>
+    </div>
+    <ul class="todolist-collection" id="todolist-collection"></ul>
+  </div>
+  <div class="delete-div">
+    <img style="margin-left: 200px; width: 100px;" src="./img/soroq.jfif" alt="">
+    <h1 class="h1">Siz ochirilishiga rozimisiz?</h1>
+    <button type="submit" class="yes">Yes</button>
+    <button type="submit" class="no">No</button>
+  </div>
+  <script src=".//script/app.js"></script>
+</body>
+
+</html>
